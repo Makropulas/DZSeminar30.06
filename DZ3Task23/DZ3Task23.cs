@@ -12,14 +12,17 @@ namespace DZ
 
             Console.WriteLine("--------------------------------");
 
+            string result = String.Empty;
             if (number <= 0)
             {
                 Console.WriteLine("Число не соответствует условиям этой задачи");
             }
             for (double num = 1; num <= number; num++)
             {
-                Console.WriteLine(Math.Pow(num, 3));
+                if (num < number) result = result + $"{Math.Pow(num, 3)}, ";
+                else result = result + $"{Math.Pow(num, 3)}";
             }
+            Console.WriteLine(result);
         }
     }
 }
